@@ -111,6 +111,26 @@ header{
     width: 100%;
     display: flex;
 }
+@media (max-width: 992px) {
+    .nav-bar .links,
+    .nav-bar .action-btn{
+        display: none;
+    }
+
+    .nav-bar .toggle-btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
 
 
 
