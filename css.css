@@ -169,6 +169,31 @@ header{
     margin-left: 20rem;
     padding: 20px;
 }
+.bottom{
+    display: flex;
+    margin-bottom: 3rem;
+}
+.bottom-container1{
+    display: flex;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    padding: 20px;
+    gap: 4rem;
+    margin-top:4rem;
+    margin-left:4rem;
+}
+.bottom-container2{
+    display: flex;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    color: white;
+    gap: 4rem;
+    padding: 20px;
+    margin-top:4rem;
+    margin-left:30rem;
+    align-items: center;
+
+}
 
 
 
