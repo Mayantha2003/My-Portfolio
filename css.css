@@ -491,6 +491,40 @@ p{
     from { width: 0; }
 }
 
+/*Tool*/
+.tools-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tool-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #111111;
+    border: 1px solid  rgba(255,255,255,0.07);
+    border-radius: 100px;
+    padding: 1rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #999;
+    transition: border-color .2s, color .2s;
+}
+.tool-pill:hover {
+    border-color: rgba(69,156,243,0.25);
+    color: #f0f0f0;
+}
+.tool-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background:  #459CF3;
+    flex-shrink: 0;
+}
+
+
 
 
 
