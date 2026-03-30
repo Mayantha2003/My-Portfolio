@@ -524,6 +524,85 @@ p{
     flex-shrink: 0;
 }
 
+/*Eduction*/
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tl-item {
+    display: grid;
+    grid-template-columns: 140px 32px 1fr;
+    align-items: start;
+    gap: 0 20px;
+}
+
+.tl-year {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #459CF3;
+    padding-top: 4px;
+    text-align: right;
+}
+
+.tl-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tl-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #459CF3;
+    border: 2px solid #0a0a0a;
+    outline: 2px solid rgba(69,156,243,0.25);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+.tl-connector {
+    width: 2px;
+    flex: 1;
+    background: rgba(255,255,255,0.12);
+    min-height: 40px;
+}
+.tl-item:last-child .tl-connector {
+    display: none;
+}
+
+.tl-body {
+    background: #111111;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    transition: border-color .2s;
+}
+.tl-body:hover {
+    border-color:rgba(69,156,243,0.25);
+}
+
+.tl-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: white;
+}
+.tl-place {
+    font-size: 0.78rem;
+    color: #459CF3;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.tl-desc {
+    font-size: 0.82rem;
+    color: #999;
+    line-height: 1.6;
+}
+
 
 
 
