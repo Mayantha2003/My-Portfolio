@@ -26,7 +26,8 @@ a:hover{
 
 header{
     position: relative;
-    padding: 2rem;
+    padding: 1rem;
+    border-bottom: 0.5px solid white;
 }
 
 .nav-bar{
@@ -211,22 +212,201 @@ p{
 
 
 /*About_me_style*/
-
-.about_me_box1{
-    width: 1254px;
-    height: auto;
-    border: 3px solid #459CF3;
-    border-radius: 48px;
-    margin-left: 13rem;
-    margin-top: 5rem;
+.hero{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 25px 0 25px;
+    max-width: 1200px;
+    margin-left: 15rem;
 }
-.line-image1 {
-    width: 50%;
-    height: auto;
-    border-top-left-radius: 48px;
-    border-bottom-left-radius: 48px;
-
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
+.hero-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(69,156,243,0.10);
+    border: 1px solid   rgba(69,156,243,0.25);
+    border-radius: 100px;
+    padding: 6px 16px;
+    width: fit-content;
+}
+.dot{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background:  #459CF3;
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(0.8); }
+}
+.hero-badge span {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color:  #459CF3;
+}
+.hero-title {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+.hero-title .line2 {
+    color: #459CF3 ;
+}
+.hero-desc {
+    color:  #999;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 480px;
+}
+.hero_button{
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background:  #459CF3;
+    color: #fff;
+    font-size: 0.85rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: opacity .2s, transform .15s;
+}
+.btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #f0f0f0;
+    font-size: 0.85rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background .2s, border-color .2s, transform .15s;
+}
+.btn-outline:hover {
+    background: #161616;
+    border-color: rgba(69,156,243,0.25);;
+    transform: translateY(-1px);
+}
+/* right col — avatar card */
+.hero-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.avatar-wrap {
+    position: relative;
+    width: 300px;
+    height: 360px;
+}
+/* spinning border on avatar */
+.avatar-frame {
+    position: absolute;
+    inset: -3px;
+    border-radius: 22px;
+    background: conic-gradient(#459CF3, #141414, #459CF3, #141414, #459CF3);
+    animation: spinBorder 4s linear infinite;
+    z-index: 0;
+}
+@keyframes spinBorder {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.avatar-inner {
+    position: relative;
+    width: 300px; height: 360px;
+    border-radius: 20px;
+    background: #111111;
+    border: none;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* placeholder silhouette */
+.avatar-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.avatar-circle {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(69,156,243,0.10);
+    border: 2px solid rgba(69,156,243,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-circle img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.avatar-name {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color:#f0f0f0;
+    margin-top: 8px;
+}
+.avatar-role {
+    font-size: 0.8rem;
+    color: #999;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
