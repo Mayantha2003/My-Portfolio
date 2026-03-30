@@ -131,6 +131,15 @@ header{
         width: unset;
     }
 }
+.links li a.active,
+.dropdown_menu li a.active {
+    color: black;
+    background: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid black;
+    font-weight: bold;
+}
 /*Footer-Section*/
 
 .footer-container{
@@ -192,6 +201,27 @@ header{
     margin-top:4rem;
     margin-left:30rem;
     align-items: center;
+}
+p{
+    color: white;
+}
+
+
+/*About_me_style*/
+
+.about_me_box1{
+    width: 1254px;
+    height: auto;
+    border: 3px solid #459CF3;
+    border-radius: 48px;
+    margin-left: 13rem;
+    margin-top: 5rem;
+}
+.line-image1 {
+    width: 50%;
+    height: auto;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
 
 }
 
