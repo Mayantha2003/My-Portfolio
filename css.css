@@ -11,6 +11,8 @@ body{
     min-height: 100vh;
     background: #030303;
     padding-top: 30px;
+    font-family: "Outfit", sans-serif;
+    /*background: white;*/
 }
 li{
     list-style: none;
@@ -22,7 +24,7 @@ a{
     font-size: 1rem;
 }
 a:hover{
-    color: blue;
+    color:#459CF3;
 }
 
 /* ==================== NAVBAR ==================== */
@@ -893,6 +895,210 @@ p{
 .skill-card:nth-child(2) { animation-delay: 0.2s; }
 .skill-card:nth-child(3) { animation-delay: 0.3s; }
 
+
+/*======Contact Me Page=============*/
+
+.page-hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 70px 20px 40px;
+    animation: fadeDown 0.7s ease both;
+    font-family: "Outfit", sans-serif;
+}
+.page-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(69,156,243,0.10);
+    border: 1px solid rgba(69,156,243,0.25);
+    border-radius: 100px;
+    padding: 6px 18px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #459CF3;
+    margin-top: 4rem;
+}
+.page-tag .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #459CF3;
+    animation: pulse 2s ease-in-out infinite;
+}
+.page-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 5px;
+    color: white;
+}
+.page-hero h1 span {
+    color: #459CF3;
+}
+.page-hero p {
+    color: #999;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-box {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 40px;
+    align-items: start;
+}
+.left-box{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* spinning border card */
+.info-card-main {
+    position: relative;
+    border-radius: 18px;
+    z-index: 0;
+}
+
+.info-card-main-inner {
+    background: #111111;
+    border-radius: 18px;
+    padding: 28px 24px;
+}
+.info-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(69,156,243,0.12);
+    border: 2px solid rgba(69,156,243,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.info-avatar img {
+    width: 54px;
+    height: 54px;
+    border-radius:50%;
+    fill: #459CF3;
+}
+.info-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+}
+.info-role {
+    font-size: 0.82rem;
+    color: #459CF3;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.info-bio {
+    font-size: 0.85rem;
+    color: #999;
+    line-height: 1.7; }
+
+/* contact detail cards */
+.info-item {
+    background: #111111;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+}
+.info-item:hover {
+    border-color: rgba(69,156,243,0.45);
+    transform: translateX(5px);
+    box-shadow: -4px 0 20px rgba(69,156,243,0.1);
+    color: #fff;
+}
+.info-item-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background: rgba(69,156,243,0.12);
+    border: 1px solid rgba(69,156,243,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s, transform .25s;
+}
+.info-item:hover .info-item-icon {
+    background: rgba(69,156,243,0.22);
+    transform: scale(1.1) rotate(-5deg);
+}
+.info-item-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #459CF3;
+}
+.info-item-label {
+    font-size: 0.7rem;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.info-item-value {
+    font-size: 0.88rem;
+    color: #ddd;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* social row */
+.socials-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.social-btn {
+    flex: 1;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #111111;
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #459CF3;
+    transition: border-color .25s, transform .2s, box-shadow .25s, background .25s;
+}
+.social-btn:hover {
+    border-color: #459CF3;
+    background: rgba(69,156,243,0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(69,156,243,0.2);
+    color: #459CF3;
+}
+.social-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+
+
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 /* DESKTOP / LAPTOP — 1200px+ */
@@ -1077,7 +1283,8 @@ p{
 }
 
 /* MOBILE — 601px to 768px */
-@media (max-width: 768px) {
+@media (max-width: 768px)
+{
     .hero {
         grid-template-columns: 1fr;
         padding: 30px 24px 0 24px;
