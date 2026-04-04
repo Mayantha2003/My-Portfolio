@@ -64,7 +64,7 @@
     </section>
 
     <section>
-        <div class="contact-box">
+        <div class="contact-box2">
 
             <div class="left-box">
                 <div class="info-card-main">
@@ -73,7 +73,7 @@
                             <img src="assets/WhatsApp%20Image%202026-02-26%20at%2012.17.40.jpeg" alt="Photo"    >
                         </div>
                         <div class="info-name">Kaveesha Sithum</div>
-                        <div class="info-role">Full Stack Developer & UI/UX Designer</div>
+                        <div class="info-role">Full Stack Developer</div>
                         <div class="info-bio">Based in Piliyandala, Sri Lanka. Passionate about building beautiful
                             digital experiences. Always happy to discuss new ideas and opportunities.</div>
                     </div>
@@ -128,7 +128,64 @@
                 </div>
             </div>
 
-        <div class="right-box"></div>
+            <div class="right-box">
+                <div class="form-title">Send a Message</div>
+                <div class="form-sub">Fill out the form below and I'll reply within 24 hours.</div>
+
+                <div id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Kaveesha" id="firstName"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Sithum" id="lastName"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="you@example.com" id="email"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone (Optional)</label>
+                        <input type="tel" placeholder="+94 70 000 0000" id="phone"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select id="subject">
+                            <option value="" disabled selected>Select a topic...</option>
+                            <option>Freelance Project</option>
+                            <option>Internship Opportunity</option>
+                            <option>Collaboration</option>
+                            <option>General Inquiry</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Tell me about your project or idea..." id="message"></textarea>
+                    </div>
+
+                    <button class="btn-submit">
+                        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        Send Message
+                    </button>
+                </div>
+
+                <!-- Success state -->
+                <div class="form-success" id="formSuccess">
+                    <div class="tick">
+                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                </div>
+            </div>
         </div>
     </section>
 </main>
