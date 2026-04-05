@@ -1904,3 +1904,117 @@ p{
     font-size: 15px;
     margin: 0;
 }
+
+/*============Home-page-tools-section==========*/
+
+.tools-orbit-wrap{
+    position:relative;
+    width:280px;
+    height:280px;
+    margin:0 auto 48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 5rem;
+}
+.orbit-center{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:rgba(69,156,243,.12);
+    border:2px solid rgba(69,156,243,.3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+    font-size:1rem;
+    color:#459CF3;
+    z-index:2;
+    position:relative;
+}
+.orbit-ring{
+    position:absolute;
+    border-radius:50%;
+    border:1px dashed rgba(69,156,243,.15);
+    margin-left: 0.1rem;
+}
+.orbit-ring-1{
+    width:220px;
+    height:220px;
+}
+.orbit-ring-2{
+    width:300px;
+    height:300px;
+}
+.orbit-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    margin:-18px;
+    background:#111;
+    border:1px solid rgba(255,255,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.65rem;
+    font-weight:700;
+    color:#aaa;
+    animation:orbitSpin linear infinite;
+    transition:border-color .3s,color .3s;
+}
+.orbit-icon:hover{
+    border-color:#459CF3;
+    color:#459CF3;
+}
+.orbit-icon svg {
+    width:16px;
+    height:16px;
+    fill:#459CF3;
+}
+.o1{
+    animation-duration:8s;
+    transform:rotate(0deg) translateX(90px) rotate(0deg);
+}
+.o2{
+    animation-duration:8s;
+    animation-delay:-2s;
+    transform:rotate(90deg) translateX(90px) rotate(-90deg);
+}
+.o3{
+    animation-duration:8s;
+    animation-delay:-4s;
+    transform:rotate(180deg) translateX(90px) rotate(-180deg);
+}
+.o4{
+    animation-duration:8s;
+    animation-delay:-6s;
+    transform:rotate(270deg) translateX(90px) rotate(-270deg);
+}
+.o5{
+    animation-duration:14s;
+    transform:rotate(0deg) translateX(130px) rotate(0deg);
+}
+.o6{
+    animation-duration:14s;
+    animation-delay:-2.8s;
+    transform:rotate(72deg) translateX(130px) rotate(-72deg);
+}
+.o7{
+    animation-duration:14s;
+    animation-delay:-5.6s;
+    transform:rotate(144deg) translateX(130px) rotate(-144deg);
+}
+.o8{
+    animation-duration:14s;
+    animation-delay:-8.4s;
+    transform:rotate(216deg) translateX(130px) rotate(-216deg);
+}
+.o9{
+    animation-duration:14s;
+    animation-delay:-11.2s;
+    transform:rotate(288deg) translateX(130px) rotate(-288deg);
+}
+
