@@ -53,58 +53,97 @@
 </header>
 
 <main>
-<section>
-    <div class="section-head-home" style="margin-top:5rem">
-        <div class="section-tag">My Work</div>
-        <h2 class="section-title-project">Projects and <span>Assignments</span></h2>
-        <p class="section-sub">A showcase of everything I've built — from full-scale projects to academic work.</p>
-    </div>
+    <section>
+        <div class="section-head-home" style="margin-top:5rem">
+            <div class="section-tag">My Work</div>
+            <h2 class="section-title-project">Projects and <span>Assignments</span></h2>
+            <p class="section-sub">A showcase of everything I've built — from full-scale projects to academic work.</p>
+        </div>
 
-    <!-- ── STATS ── -->
-    <div class="stats-bar">
-        <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Projects</div></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Assignments</div></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Technologies</div></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Passion</div></div></div>
+        <!-- ── STATS ── -->
+        <div class="stats-bar">
+            <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Projects</div></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Assignments</div></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Technologies</div></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Passion</div></div></div>
 
-    <!-- ── TABS ── -->
-    <div class="tabs">
-        <button class="tab active" onclick="filterCards('all', this)">All</button>
-        <button class="tab" onclick="filterCards('project', this)">Projects</button>
-        <button class="tab" onclick="filterCards('assignment', this)">Assignments</button>
-    </div>
-</section>
+        <!-- ── TABS ── -->
+        <div class="tabs">
+            <button class="tab active" onclick="filterCards('all', this)">All</button>
+            <button class="tab" onclick="filterCards('project', this)">Projects</button>
+            <button class="tab" onclick="filterCards('assignment', this)">Assignments</button>
+        </div>
+    </section>
+    <section class="section" id="projects-sec">
+        <div class="section-label">Works</div>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-main-div">
+            <div class="proj-card" data-type="project">
+                <div class="preview">
+                    <div class="screen screen-1">
+                        <video autoplay loop muted playsinline>
+                            <source src="assets/video/pharmacy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="card-badges">
+                        <span class="badge b-purple">Java</span>
+                        <span class="badge b-cyan">JavaFX</span>
+                        <span class="badge b-green">MySQL</span>
+                        <span class="badge b-amber">MVC Architecture</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-name">Pharmacy Management System (MVC Architecture)</div>
+                        <div class="card-desc">A robust desktop application designed to automate pharmacy operations.
+                            Features include real-time inventory tracking with stock-level alerts, automated expiry
+                            date monitoring, and a streamlined billing system. Built using MVC architecture to ensure
+                            high performance, modularity, and secure data handling.</div>
+                        <div class="card-footer">
+                            <div class="card-links">
+                                <button class="btn btn-demo">▶ Demo</button>
+                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                            </div>
+                            <span class="card-year">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proj-card" data-type="project">
+                <div class="preview">
+                    <div class="screen screen-1">
+
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="card-badges">
+                        <span class="badge b-purple">React</span>
+                        <span class="badge b-cyan">Node.js</span>
+                        <span class="badge b-green">MongoDB</span>
+                        <span class="badge b-amber">JWT</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-name">Auth System</div>
+                        <div class="card-desc">Full-stack JWT authentication with login, signup, session management, and role-based access control.</div>
+                        <div class="card-footer">
+                            <div class="card-links">
+                                <button class="btn btn-demo">▶ Demo</button>
+                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                            </div>
+                            <span class="card-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 </main>
 
 <hr class="divider"/>
