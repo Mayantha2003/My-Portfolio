@@ -1591,8 +1591,7 @@ header{
 }
 
 /* MOBILE — 601px to 768px */
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
         padding: 30px 24px 0 24px;
