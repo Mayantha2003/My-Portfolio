@@ -53,6 +53,7 @@
 </header>
 
 <main>
+
     <section>
         <div class="section-head-home" style="margin-top:5rem">
             <div class="section-tag">My Work</div>
@@ -107,8 +108,14 @@
                             high performance, modularity, and secure data handling.</div>
                         <div class="card-footer">
                             <div class="card-links">
-                                <button class="btn btn-demo">▶ Demo</button>
-                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                                <button class="btn btn-demo"
+                                        onclick="window.open('https://youtu.be/Zsr1mkULBTE?si=VesJsBTbIdzrWrxM', '_blank')">
+                                    ▶ Demo
+                                </button>
+                                <button class="btn btn-code"
+                                        onclick="window.open('https://github.com/Mayantha2003/Pharmacy-Project-MVC-Architecture-/tree/main', '_blank')">
+                                    &lt;/&gt; Code
+                                </button>
                             </div>
                             <span class="card-year">2025</span>
                         </div>
@@ -140,8 +147,14 @@
                             real-time stock alerts, and secure transaction handling.</div>
                         <div class="card-footer">
                             <div class="card-links">
-                                <button class="btn btn-demo">▶ Demo</button>
-                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                                <button class="btn btn-demo"
+                                        onclick="window.open('https://youtu.be/Zsr1mkULBTE?si=VesJsBTbIdzrWrxM', '_blank')">
+                                    ▶ Demo
+                                </button>
+                                <button class="btn btn-code"
+                                        onclick="window.open('https://github.com/Mayantha2003/Pharmacy-Project-Layered--Architecture', '_blank')">
+                                    &lt;/&gt; Code
+                                </button>
                             </div>
                             <span class="card-year">2026</span>
                         </div>
@@ -172,8 +185,13 @@
                             maintainable code.</div>
                         <div class="card-footer">
                             <div class="card-links">
-                                <button class="btn btn-demo">▶ Demo</button>
-                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                                <button class="btn btn-demo"
+                                        onclick="window.open('https://youtu.be/sazEwAlaIV4?si=7vpbRWGaswht-KWb', '_blank')">
+                                    ▶ Demo
+                                </button>                                <button class="btn btn-code"
+                                        onclick="window.open('https://github.com/Mayantha2003/OOP-Course-Work-connect-four-game-assignment', '_blank')">
+                                    &lt;/&gt; Code
+                                </button>
                             </div>
                             <span class="card-year">2025</span>
                         </div>
@@ -206,8 +224,13 @@
                             the need for high-end graphical frameworks.</div>
                         <div class="card-footer">
                             <div class="card-links">
-                                <button class="btn btn-demo">▶ Demo</button>
-                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                                <button class="btn btn-demo"
+                                        onclick="window.open('https://youtu.be/ynRTIRF9gY4?si=QDXWmSqZhUcc-Dd4', '_blank')">
+                                    ▶ Demo
+                                </button>                                   <button class="btn btn-code"
+                                        onclick="window.open('https://github.com/Mayantha2003/PRF-Course-Work-Stock-Management-System-CLI-Application', '_blank')">
+                                    &lt;/&gt; Code
+                                </button>
                             </div>
                             <span class="card-year">2025</span>
                         </div>
@@ -240,8 +263,14 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-links">
-                                <button class="btn btn-demo">▶ Demo</button>
-                                <button class="btn btn-code">&lt;/&gt; Code</button>
+                                <button class="btn btn-demo"
+                                        onclick="window.open('https://youtu.be/EY63YA1nJq0?si=RlJsjkOjS77FbxD4', '_blank')">
+                                    ▶ Demo
+                                </button>
+                                <button class="btn btn-code"
+                                        onclick="window.open('https://github.com/Mayantha2003/DBP-Course-Work-Gym-Management-System-CLI-Application', '_blank')">
+                                    &lt;/&gt; Code
+                                </button>
                             </div>
                             <span class="card-year">2025</span>
                         </div>
@@ -253,7 +282,7 @@
 
     <hr class="divider"/>
 
-    <section class="section" id="projects-sec-assignment">
+    <section class="section" id="assignment-sec">
         <div class="section-label">Works</div>
         <h2 class="section-title">Assignments</h2>
 
@@ -606,7 +635,9 @@
             </div>
         </div>
     </section>
+
 </main>
+
 <footer class="footer_main">
     <div class="footer-container">
         <div class="footer-top">
@@ -678,18 +709,31 @@
     </div>
 </footer>
 
-<!--<script>-->
-<!--    const card = document.querySelector('.project-card-container');-->
-<!--    const video = document.querySelector('.project-video');-->
+<script>
+    function filterCards(type, btn) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
 
-<!--    card.addEventListener('mouseenter', () => {-->
-<!--        video.play();-->
-<!--    });-->
+        const projSec   = document.getElementById('projects-sec');
+        const assignSec = document.getElementById('assignment-sec');
+        const dividers  = document.querySelectorAll('.divider');
 
-<!--    card.addEventListener('mouseleave', () => {-->
-<!--        video.pause();-->
-<!--        video.currentTime = 0;-->
-<!--    });-->
-<!--</script>-->
+        if (type === 'all') {
+            projSec.style.display   = 'block';
+            assignSec.style.display = 'block';
+            dividers.forEach(d => d.style.display = 'block');
+        } else if (type === 'project') {
+            projSec.style.display   = 'block';
+            assignSec.style.display = 'none';
+            dividers.forEach(d => d.style.display = 'none');
+        } else if (type === 'assignment') {
+            projSec.style.display   = 'none';
+            assignSec.style.display = 'block';
+            dividers.forEach(d => d.style.display = 'none');
+        }
+    }
+</script>
+
+
 </body>
 </html>
