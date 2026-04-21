@@ -318,6 +318,106 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function () {
+            "use strict";
+
+            /* ── 1. Grab elements ── */
+            const toggleBtn    = document.getElementById("toggleBtn");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            /* Guard: exit silently if elements don't exist on the page */
+            if (!toggleBtn || !dropdownMenu) return;
+
+            /* ── 2. Toggle open / closed ── */
+            function openMenu() {
+                dropdownMenu.classList.add("open");
+                toggleBtn.setAttribute("aria-expanded", "true");
+                toggleBtn.textContent = "✕";          /* change icon to X */
+                toggleBtn.setAttribute("aria-label", "Close menu");
+            }
+
+            function closeMenu() {
+                dropdownMenu.classList.remove("open");
+                toggleBtn.setAttribute("aria-expanded", "false");
+                toggleBtn.textContent = "☰";          /* back to hamburger */
+                toggleBtn.setAttribute("aria-label", "Open menu");
+            }
+
+            function toggleMenu() {
+                const isOpen = dropdownMenu.classList.contains("open");
+                isOpen ? closeMenu() : openMenu();
+            }
+
+            toggleBtn.addEventListener("click", function (e) {
+                e.stopPropagation();   /* prevent the document click below from firing */
+                toggleMenu();
+            });
+
+            /* ── 3. Close when clicking anywhere outside the menu ── */
+            document.addEventListener("click", function (e) {
+                const clickedInsideMenu = dropdownMenu.contains(e.target);
+                const clickedToggle     = toggleBtn.contains(e.target);
+
+                if (!clickedInsideMenu && !clickedToggle) {
+                    closeMenu();
+                }
+            });
+
+            /* ── 4. Close when pressing Escape ── */
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") closeMenu();
+            });
+
+            /* ── 5. Close when a menu link is clicked (SPA-style nav) ── */
+            dropdownMenu.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    closeMenu();
+                });
+            });
+
+            /* ── 6. Close on resize back to desktop width ── */
+            window.addEventListener("resize", function () {
+                if (window.innerWidth > 992) {
+                    closeMenu();
+                }
+            });
+
+            /* ── 7. Highlight the active page link ──
+               Compares every anchor's pathname to the current page pathname.
+               Works for both the desktop .links and the .dropdown_menu.       */
+            const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+
+            document.querySelectorAll(".links a, .dropdown_menu a").forEach(function (a) {
+                const linkPath = new URL(a.href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
+
+                if (linkPath === currentPath) {
+                    a.classList.add("active");
+                } else {
+                    a.classList.remove("active");
+                }
+            });
+
+            /* ── 8. Navbar scroll shrink effect (optional but nice) ──
+               Adds a class .scrolled to <header> after scrolling 60 px.
+               Add CSS:  header.scrolled .nav-bar { height: 58px; }  if desired. */
+            const header = document.querySelector("header");
+
+            if (header) {
+                window.addEventListener(
+                    "scroll",
+                    function () {
+                        if (window.scrollY > 60) {
+                            header.classList.add("scrolled");
+                        } else {
+                            header.classList.remove("scrolled");
+                        }
+                    },
+                    { passive: true }
+                );
+            }
+        })();
+    </script>
 
     </body>
     </html>
